@@ -4,7 +4,7 @@ void heapify(int a[], int size, int i);
 void buildHeap(int a[], int size);
 void heapSort(int a[], int size);
 int main() {
-  int a[] = {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
+  int a[] = {4, 1, 3, 2, 11, 9, 10, 5, 8, 7, 6, 12};
   int size = sizeof(a) / sizeof(int);
   heapSort(a, size);
   for (int i = 0; i < size; i++) {
@@ -43,9 +43,9 @@ void heapSort(int a[], int size) {
     swap(a[0], a[i]);
     size--;
     heapify(a, size, 0);
-    // cout << endl;
-    // for (int i = 0; i < size; i++) {
-    //   cout << a[i] << " ";
-    // }
+    cout << endl;
+    for (int i = 0; i < size; i++) {
+      cout << a[i] << " ";
+    }
   }
 }
