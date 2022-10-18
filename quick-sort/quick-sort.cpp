@@ -4,9 +4,9 @@ int partition(int a[], int p, int r);
 void quickSort(int a[], int p, int r);
 
 int main() {
-  int a[] = {3, 8, 2, 6, 4, 1, 5, 7, 9};
-  quickSort(a, 0, 9);
-  for (int i = 0; i < 9; i++) {
+  int a[] = {8, 4, 6, 9};
+  quickSort(a, 0, 4);
+  for (int i = 0; i < 4; i++) {
     cout << a[i] << " ";
   }
 }
@@ -16,6 +16,13 @@ int partition(int a[], int p, int r) {
   int i = p - 1;
   int j = r + 1;
   while (true) {
+    cout << "1 -p=" << p << " r=" << r << endl;
+    cout << "1 -i=" << i << " j=" << j << " x=" << x << endl;
+    for (int i = 0; i < 9; i++) {
+      cout << a[i] << " ";
+    }
+    cout << endl;
+
     do {
       i++;
     } while (a[i] < x);
